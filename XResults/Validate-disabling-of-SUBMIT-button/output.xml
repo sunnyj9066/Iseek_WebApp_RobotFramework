@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190212 13:23:56.545" generator="Robot 3.1.1 (Python 2.7.14 on win32)">
+<suite source="C:\Users\Sunny\PycharmProjects\iSeek\Tests\Validate-disabling-of-SUBMIT-button.robot" id="s1" name="Validate-disabling-of-SUBMIT-button">
+<test id="s1-t1" name="Validate SUBMIT button is disabled initially as soon as clicked on 'Add offer'">
+<kw name="Login as Merchant - Sunny" library="LoginCredentials">
+<kw name="Open Browser To Login Page" library="LoginCredentials">
+<kw name="Set Selenium Implicit Wait" library="ExtendedSelenium2Library">
+<doc>Sets Selenium 2's default implicit wait in seconds and
+sets the implicit wait for all open browsers.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<status status="PASS" endtime="20190212 13:23:57.155" starttime="20190212 13:23:57.154"></status>
+</kw>
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${iseek Login Url}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20190212 13:23:57.156" level="INFO">Opening browser 'Chrome' to base url 'http://122.166.186.167:8080/Merchant_APP1/#/login'</msg>
+<status status="PASS" endtime="20190212 13:24:10.253" starttime="20190212 13:23:57.156"></status>
+</kw>
+<kw name="Maximize Browser Window" library="ExtendedSelenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190212 13:24:11.718" starttime="20190212 13:24:10.253"></status>
+</kw>
+<status status="PASS" endtime="20190212 13:24:11.718" starttime="20190212 13:23:57.154"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME - INPUT - LOCATOR}</arg>
+<arg>${Sunny-Username}</arg>
+</arguments>
+<msg timestamp="20190212 13:24:11.720" level="INFO">Typing text '9511854553' into text field 'xpath=//input[@placeholder='Mobile Number']'</msg>
+<status status="PASS" endtime="20190212 13:24:12.250" starttime="20190212 13:24:11.719"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD - INPUT - LOCATOR}</arg>
+<arg>${Sunny-Password}</arg>
+</arguments>
+<msg timestamp="20190212 13:24:12.252" level="INFO">Typing text '4722' into text field 'xpath=//input[@placeholder='Password / PIN']'</msg>
+<status status="PASS" endtime="20190212 13:24:12.710" starttime="20190212 13:24:12.251"></status>
+</kw>
+<kw name="Custom Click Element" library="LoginCredentials">
+<arguments>
+<arg>${Login Button Locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20190212 13:24:12.769" starttime="20190212 13:24:12.713"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOCATOR}</arg>
+</arguments>
+<msg timestamp="20190212 13:24:12.771" level="INFO">Clicking element 'xpath=//span[text()=' LOGIN ']'.</msg>
+<status status="PASS" endtime="20190212 13:24:14.177" starttime="20190212 13:24:12.770"></status>
+</kw>
+<status status="PASS" endtime="20190212 13:24:14.178" starttime="20190212 13:24:12.711"></status>
+</kw>
+<status status="PASS" endtime="20190212 13:24:14.178" starttime="20190212 13:23:57.152"></status>
+</kw>
+<kw name="Wait Until Angular Ready" library="ExtendedSelenium2Library">
+<doc>Waits until [https://goo.gl/Kzz8Y3|AngularJS] is ready to process the next request or
+``timeout`` expires.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20190212 13:24:14.256" starttime="20190212 13:24:14.178"></status>
+</kw>
+<kw name="Click on Create offers" library="CreateOffers">
+<kw name="Custom Click Element" library="LoginCredentials">
+<arguments>
+<arg>${Create offers Left Nav Locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20190212 13:24:14.301" starttime="20190212 13:24:14.259"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOCATOR}</arg>
+</arguments>
+<msg timestamp="20190212 13:24:14.302" level="INFO">Clicking element 'xpath=//mat-nav-list/div[8]'.</msg>
+<status status="PASS" endtime="20190212 13:24:15.861" starttime="20190212 13:24:14.301"></status>
+</kw>
+<status status="PASS" endtime="20190212 13:24:15.862" starttime="20190212 13:24:14.258"></status>
+</kw>
+<status status="PASS" endtime="20190212 13:24:15.862" starttime="20190212 13:24:14.257"></status>
+</kw>
+<kw name="Click on Add offer" library="CreateOffers">
+<kw name="Custom Click Element" library="LoginCredentials">
+<arguments>
+<arg>${Add offer - button - LOCATOR}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${LOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20190212 13:24:16.368" starttime="20190212 13:24:15.866"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOCATOR}</arg>
+</arguments>
+<msg timestamp="20190212 13:24:16.371" level="INFO">Clicking element 'xpath=//span[text()=' Add Offer ']'.</msg>
+<status status="PASS" endtime="20190212 13:24:18.253" starttime="20190212 13:24:16.370"></status>
+</kw>
+<status status="PASS" endtime="20190212 13:24:18.253" starttime="20190212 13:24:15.864"></status>
+</kw>
+<status status="PASS" endtime="20190212 13:24:18.254" starttime="20190212 13:24:15.863"></status>
+</kw>
+<kw name="Verify SUBMIT button is disabled or not" library="CreateOffers">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Disabled</arg>
+<arg>${Submit Button Locator}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Element Should Be Disabled" library="ExtendedSelenium2Library">
+<doc>Verifies that element identified with `locator` is disabled.</doc>
+<arguments>
+<arg>${Submit Button Locator}</arg>
+</arguments>
+<status status="PASS" endtime="20190212 13:24:18.602" starttime="20190212 13:24:18.258"></status>
+</kw>
+<msg timestamp="20190212 13:24:18.602" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20190212 13:24:18.603" starttime="20190212 13:24:18.256"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==True</arg>
+<arg>Log To Console</arg>
+<arg>SUBMIT button is Disabled</arg>
+<arg>ELSE</arg>
+<arg>Fail</arg>
+<arg>SUBMIT button is enabled</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>SUBMIT button is Disabled</arg>
+</arguments>
+<status status="PASS" endtime="20190212 13:24:18.607" starttime="20190212 13:24:18.606"></status>
+</kw>
+<status status="PASS" endtime="20190212 13:24:18.608" starttime="20190212 13:24:18.604"></status>
+</kw>
+<status status="PASS" endtime="20190212 13:24:18.608" starttime="20190212 13:24:18.254"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="ExtendedSelenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190212 13:24:21.832" starttime="20190212 13:24:18.609"></status>
+</kw>
+<tags>
+<tag>Testcase:1</tag>
+</tags>
+<status status="PASS" endtime="20190212 13:24:21.832" critical="yes" starttime="20190212 13:23:57.150"></status>
+</test>
+<status status="PASS" endtime="20190212 13:24:21.835" starttime="20190212 13:23:56.556"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Testcase:1</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Validate-disabling-of-SUBMIT-button" pass="1">Validate-disabling-of-SUBMIT-button</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
