@@ -1,3 +1,3 @@
 *** Test Cases ***
-    Validate-disabling-of-SUBMIT-button.robot
+    Validate-disabling-of-SUBMIT-button
 
